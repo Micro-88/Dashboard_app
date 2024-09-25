@@ -1,6 +1,5 @@
 import '@/app/ui/global.css';
-<<<<<<< HEAD
-import { inter } from './ui/fonts';
+import { inter } from '@/app/ui/fonts';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -8,14 +7,10 @@ export const metadata: Metadata = {
     template: '%s | Acme Dashboard',
     default: 'Acme Dashboard',
   },
-  description: 'The official Next.js Course Dashboard, build with App router.',
+  description: 'The official Next.js Course Dashboard, built with App router.',
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
 
-=======
-import { inter } from '@/app/ui/fonts';
- 
->>>>>>> origin/main
 export default function RootLayout({
   children,
 }: {
