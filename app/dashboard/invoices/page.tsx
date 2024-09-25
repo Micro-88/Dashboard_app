@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { lusitana } from '@/app/ui/fonts';
 import { CreateInvoice } from '@/app/ui/invoices/buttons';
 import Search from '@/app/ui/search';
@@ -45,3 +46,8 @@ export default async function Page({
 // Update the URL with the search params.
 // Keep the URL in sync with the input field.
 // Update the table to reflect the search query.
+=======
+export default function Page() {
+    return <p>Invoices Page</p>;
+  }
+>>>>>>> origin/main

@@ -1,13 +1,23 @@
 'use client';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 import {
   UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+=======
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
+
+>>>>>>> origin/main
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
 const links = [
@@ -39,7 +49,11 @@ export default function NavLinks() {
           >
             <LinkIcon className="w-6" />
             <p className="hidden md:block">{link.name}</p>
+<<<<<<< HEAD
           </Link>
+=======
+            </Link>
+>>>>>>> origin/main
         );
       })}
     </>

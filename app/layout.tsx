@@ -1,4 +1,5 @@
 import '@/app/ui/global.css';
+<<<<<<< HEAD
 import { inter } from './ui/fonts';
 import { Metadata } from 'next';
 
@@ -11,6 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
 
+=======
+import { inter } from '@/app/ui/fonts';
+ 
+>>>>>>> origin/main
 export default function RootLayout({
   children,
 }: {

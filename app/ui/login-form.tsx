@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 'use client';
 
+=======
+>>>>>>> origin/main
 import { lusitana } from '@/app/ui/fonts';
 import {
   AtSymbolIcon,
@@ -8,6 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
+<<<<<<< HEAD
 import { useFormState, useFormStatus } from 'react-dom';
 import { authenticate } from '../lib/actions';
 
@@ -15,6 +19,12 @@ export default function LoginForm() {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined);
   return (
     <form action={dispatch} className="space-y-3">
+=======
+
+export default function LoginForm() {
+  return (
+    <form className="space-y-3">
+>>>>>>> origin/main
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
         <h1 className={`${lusitana.className} mb-3 text-2xl`}>
           Please log in to continue.
@@ -60,6 +70,7 @@ export default function LoginForm() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <LoginButton />
         <div
           className="flex h-8 items-end space-x-1"
@@ -73,11 +84,19 @@ export default function LoginForm() {
               <p className="text-sm text-red-500">{errorMessage}</p>
             </>
           )}
+=======
+        <Button className="mt-4 w-full">
+          Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
+        </Button>
+        <div className="flex h-8 items-end space-x-1">
+          {/* Add form errors here */}
+>>>>>>> origin/main
         </div>
       </div>
     </form>
   );
 }
+<<<<<<< HEAD
 
 function LoginButton() {
   const { pending } = useFormStatus();
@@ -87,3 +106,5 @@ function LoginButton() {
     </Button>
   );
 }
+=======
+>>>>>>> origin/main

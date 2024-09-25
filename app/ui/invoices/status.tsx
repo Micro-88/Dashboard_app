@@ -5,7 +5,11 @@ export default function InvoiceStatus({ status }: { status: string }) {
   return (
     <span
       className={clsx(
+<<<<<<< HEAD
         'inline-flex items-center rounded-full px-1 py-1 text-sm',
+=======
+        'inline-flex items-center rounded-full px-2 py-1 text-xs',
+>>>>>>> origin/main
         {
           'bg-gray-100 text-gray-500': status === 'pending',
           'bg-green-500 text-white': status === 'paid',

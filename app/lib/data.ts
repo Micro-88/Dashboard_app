@@ -5,6 +5,7 @@ import {
   InvoiceForm,
   InvoicesTable,
   LatestInvoiceRaw,
+<<<<<<< HEAD
   User,
   Revenue,
 } from './definitions';
@@ -17,16 +18,32 @@ export async function fetchRevenue() {
 
   noStore();
 
+=======
+  Revenue,
+} from './definitions';
+import { formatCurrency } from './utils';
+
+export async function fetchRevenue() {
+>>>>>>> origin/main
   try {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
+<<<<<<< HEAD
     console.log('Fetching revenue data...');
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
     console.log('Data fetch completed after 3 seconds.');
+=======
+    // console.log('Fetching revenue data...');
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    const data = await sql<Revenue>`SELECT * FROM revenue`;
+
+    // console.log('Data fetch completed after 3 seconds.');
+>>>>>>> origin/main
 
     return data.rows;
   } catch (error) {
@@ -36,8 +53,11 @@ export async function fetchRevenue() {
 }
 
 export async function fetchLatestInvoices() {
+<<<<<<< HEAD
   noStore();
 
+=======
+>>>>>>> origin/main
   try {
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
@@ -58,8 +78,11 @@ export async function fetchLatestInvoices() {
 }
 
 export async function fetchCardData() {
+<<<<<<< HEAD
   noStore();
 
+=======
+>>>>>>> origin/main
   try {
     // You can probably combine these into a single SQL query
     // However, we are intentionally splitting them to demonstrate
@@ -99,8 +122,11 @@ export async function fetchFilteredInvoices(
   query: string,
   currentPage: number,
 ) {
+<<<<<<< HEAD
   noStore();
 
+=======
+>>>>>>> origin/main
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
   try {
@@ -133,8 +159,11 @@ export async function fetchFilteredInvoices(
 }
 
 export async function fetchInvoicesPages(query: string) {
+<<<<<<< HEAD
   noStore();
 
+=======
+>>>>>>> origin/main
   try {
     const count = await sql`SELECT COUNT(*)
     FROM invoices
@@ -156,8 +185,11 @@ export async function fetchInvoicesPages(query: string) {
 }
 
 export async function fetchInvoiceById(id: string) {
+<<<<<<< HEAD
   noStore();
 
+=======
+>>>>>>> origin/main
   try {
     const data = await sql<InvoiceForm>`
       SELECT
@@ -174,7 +206,11 @@ export async function fetchInvoiceById(id: string) {
       // Convert amount from cents to dollars
       amount: invoice.amount / 100,
     }));
+<<<<<<< HEAD
     console.log(invoice);
+=======
+
+>>>>>>> origin/main
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
@@ -201,8 +237,11 @@ export async function fetchCustomers() {
 }
 
 export async function fetchFilteredCustomers(query: string) {
+<<<<<<< HEAD
   noStore();
 
+=======
+>>>>>>> origin/main
   try {
     const data = await sql<CustomersTableType>`
 		SELECT
@@ -234,6 +273,7 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error('Failed to fetch customer table.');
   }
 }
+<<<<<<< HEAD
 
 export async function getUser(email: string) {
   try {
@@ -244,3 +284,5 @@ export async function getUser(email: string) {
     throw new Error('Failed to fetch user.');
   }
 }
+=======
+>>>>>>> origin/main

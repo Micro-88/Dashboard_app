@@ -4,6 +4,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { generatePagination } from '@/app/lib/utils';
+<<<<<<< HEAD
 import { usePathname, useSearchParams } from 'next/navigation';
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
@@ -23,6 +24,19 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
       {/* NOTE: comment in this code when you get to this point in the course */}
 
       <div className="inline-flex">
+=======
+
+export default function Pagination({ totalPages }: { totalPages: number }) {
+  // NOTE: Uncomment this code in Chapter 11
+
+  // const allPages = generatePagination(currentPage, totalPages);
+
+  return (
+    <>
+      {/*  NOTE: Uncomment this code in Chapter 11 */}
+
+      {/* <div className="inline-flex">
+>>>>>>> origin/main
         <PaginationArrow
           direction="left"
           href={createPageURL(currentPage - 1)}
@@ -55,7 +69,11 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
           href={createPageURL(currentPage + 1)}
           isDisabled={currentPage >= totalPages}
         />
+<<<<<<< HEAD
       </div>
+=======
+      </div> */}
+>>>>>>> origin/main
     </>
   );
 }
